@@ -1,0 +1,8 @@
+player_name = "アンパンマン"
+player_hp = 100
+player_attack = 10
+player_defence = 3
+player_spawn_message = "来たなおじゃまむしめ"
+player_attack_message = "出たなバイキンマン"
+player_death_message = "顔が濡れて力が出ない"
+

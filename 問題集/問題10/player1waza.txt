@@ -1,0 +1,3 @@
+waza_name = '技名を入れてください'
+waza_point = 10 #必要MP
+waza_damage = 30 #ダメージ
