@@ -1,5 +1,20 @@
-# import機能を使うとライブラリを読み込んで出来ることが増えます。今回は日付に強いdatetimeを使います。
-import datetime
+# データ型についてです、数字と数字以外は区別されます
 
-now = datetime.datetime.now()
-print(now)
+print("100" + "10") # 文字が結合されて10010になる
+print(100+10) #計算されて110になる
+print(float(10))# 小数点に強い
+
+# pythonの場合(type)を付けると文字列のタイプがわかります
+text = "1234567890"
+print(type(text))#<class 'str'>
+# 文字列を数字に強制することもできます
+print(int(text))
+
+# 問題 変数textに数字の1を足して1234567891にして出力してください
+# ヒント textは文字型なのでそのままでは計算できません
+
+
+# int 数字
+# float 数字だが小数点以下に強い
+# str 文字列　""で囲まれてるのが特徴
+# bool 二択　部屋の電気みたいにONOFFしかない時に使う
