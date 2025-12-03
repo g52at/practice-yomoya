@@ -1,5 +1,6 @@
+# 簡単なゲームです、変更できる場所の数字を変更して3ターンで相手を倒せるようにしてください
 import sys
-# プレイヤーの名前
+# ---------------ここから変更できる場所---------------
 player_name = "アンパンマン" #文字
 player_hp_max = 100 #最大HP　
 player_attack = 10 #攻撃力　
@@ -15,6 +16,9 @@ enemy_defence = 5 #防御力
 enemy_spawn_message = "はっひふっへほー！"
 enemy_attack_message = "これでもくらえー！"
 enemy_death_message = "ばいばいきーん！💫"
+#---------------ここまで変更できる場所---------------
+
+
 # ゲーム内処理用の初期化だけ変数
 dmg = 0
 player_action = 0
@@ -22,9 +26,8 @@ end_flag = 0
 allow_command = [1,2]#コマンドの数
 player_hp_now = player_hp_max
 enemy_hp_now = enemy_hp_max
-# 画面用の変数
 bar_length = 15
-
+turn = 0
 
 # 状態把握用
 def stats():
@@ -99,6 +102,7 @@ def enemy_action():
 print(player_spawn_message)
 print(enemy_spawn_message)
 for i in range(100):
+    turn += 1
     player_action()#増やすともう一度攻撃できます
     enemy_action()
     stats()
@@ -106,10 +110,12 @@ for i in range(100):
     if player_hp_now < 1:
         print(player_death_message)
         print("プレイヤーが敗北しました…")
+        print("経過ターン数:" + str(turn))
         break
     if enemy_hp_now < 1:
         print(enemy_death_message)
         print("敵が敗北しました！おめでとうございます！")
+        print("経過ターン数:" + str(turn))
         break
     if i > 99: #暴走対策
         print("100T経過したので中止します")
